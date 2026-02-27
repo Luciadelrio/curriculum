@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Escaparate profesional de Lucía del Río para oportunidades en periodismo y comunicación."
+    />
+    <title>Lucía del Río | CV</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-content">
+        <strong class="brand">Lucía del Río</strong>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button id="btn-es" class="lang-btn active" type="button">ES</button>
+          <button id="btn-en" class="lang-btn" type="button">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero card">
+        <p class="eyebrow" data-i18n="hero.role">ESTUDIANTE DE PERIODISMO</p>
+        <h1>Lucía del Río</h1>
+        <p class="lead" data-i18n="hero.summary"></p>
+        <div class="actions">
+          <a class="btn" href="cv.pdf" target="_blank" rel="noopener" data-i18n="hero.viewCv"></a>
+          <a class="btn btn-secondary" href="cv.pdf" download data-i18n="hero.downloadCv"></a>
+        </div>
+      </section>
+
+      <section class="grid-2">
+        <article class="card">
+          <h2 data-i18n="sections.education"></h2>
+          <ul id="education-list" class="stack-list"></ul>
+        </article>
+
+        <article class="card">
+          <h2 data-i18n="sections.languages"></h2>
+          <ul id="languages-list" class="stack-list"></ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="sections.skills"></h2>
+        <ul id="skills-list" class="stack-list columns"></ul>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="sections.hobbies"></h2>
+        <p data-i18n="hobbies.text"></p>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="sections.contact"></h2>
+        <ul class="contact-list">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:luciadelriofraguela@gmail.com">luciadelriofraguela@gmail.com</a>
+          </li>
+          <li>
+            <span class="label" data-i18n="contact.phoneLabel"></span>
+            <a href="tel:+34636678382">+34 636 67 83 82</a>
+          </li>
+          <li>
+            <span class="label">Instagram</span>
+            <a href="https://instagram.com/luciiadelrio" target="_blank" rel="noopener">@luciiadelrio</a>
+          </li>
+          <li>
+            <span class="label">X</span>
+            <a href="https://x.com/luciiadelrio" target="_blank" rel="noopener">@luciiadelrio</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <small data-i18n="footer.text"></small>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+  </html>
