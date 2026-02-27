@@ -33,9 +33,6 @@ const content = {
       text:
         'Participo en iniciativas sociales, lo que fortalece mi liderazgo y trabajo en equipo. También me gusta formarme constantemente en nuevos idiomas para ampliar conocimientos y disfruto del diseño y la edición para potenciar mi creatividad.',
     },
-    contact: {
-      phoneLabel: 'Teléfono',
-    },
     footer: {
       text: 'Disponible para prácticas y oportunidades junior en periodismo y comunicación.',
     },
@@ -74,9 +71,6 @@ const content = {
       text:
         'I take part in social initiatives, which strengthens my leadership and teamwork skills. I also enjoy continuously learning new languages and I like design and editing, which helps me develop my creativity.',
     },
-    contact: {
-      phoneLabel: 'Phone',
-    },
     footer: {
       text: 'Open to internships and junior opportunities in journalism and communication.',
     },
@@ -87,13 +81,6 @@ const languageButtons = {
   es: document.getElementById('btn-es'),
   en: document.getElementById('btn-en'),
 };
-
-function setText(selector, value) {
-  const element = document.querySelector(selector);
-  if (element) {
-    element.textContent = value;
-  }
-}
 
 function setList(selector, items) {
   const container = document.querySelector(selector);
