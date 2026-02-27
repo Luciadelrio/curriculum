@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Escaparate profesional de Lucía del Río para oportunidades en periodismo y comunicación."
+    />
+    <title>Lucía del Río — Periodismo &amp; Comunicación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ── NAV ──────────────────────────────────────────── -->
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+      <div class="nav-inner">
+        <span class="nav-brand">Lucía del Río</span>
+        <div class="lang-toggle" aria-label="Selector de idioma">
+          <button id="btn-es" class="lang-btn active" type="button">ES</button>
+          <span class="lang-sep">|</span>
+          <button id="btn-en" class="lang-btn" type="button">EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ── HERO ─────────────────────────────────────────── -->
+    <header class="hero" role="banner">
+      <div class="hero-inner">
+        <p class="hero-eyebrow" data-i18n="hero.role"></p>
+        <h1 class="hero-name">Lucía<br />del Río</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero-bio" data-i18n="hero.summary"></p>
+        <div class="hero-cta">
+          <a class="cta-primary" href="cv.pdf" target="_blank" rel="noopener" data-i18n="hero.viewCv"></a>
+          <a class="cta-secondary" href="cv.pdf" download data-i18n="hero.downloadCv"></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── LAYOUT ────────────────────────────────────────── -->
+    <div class="page-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" role="complementary">
+
+        <div class="block">
+          <h2 class="block-title" data-i18n="sections.contact"></h2>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <a href="mailto:luciadelriofraguela@gmail.com">luciadelriofraguela@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">☏</span>
+              <a href="tel:+34636678382">+34 636 67 83 82</a>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">◎</span>
+              <a href="https://instagram.com/luciiadelrio" target="_blank" rel="noopener">@luciiadelrio</a>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">𝕏</span>
+              <a href="https://x.com/luciiadelrio" target="_blank" rel="noopener">@luciiadelrio</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h2 class="block-title" data-i18n="sections.languages"></h2>
+          <ul id="languages-list" class="lang-list"></ul>
+        </div>
+
+        <div class="block">
+          <h2 class="block-title" data-i18n="sections.education"></h2>
+          <ul id="education-list" class="edu-list"></ul>
+        </div>
+
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content" role="main">
+
+        <section class="block">
+          <h2 class="block-title" data-i18n="sections.skills"></h2>
+          <ul id="skills-list" class="tags-list"></ul>
+        </section>
+
+        <section class="block">
+          <h2 class="block-title" data-i18n="sections.hobbies"></h2>
+          <p class="body-text" data-i18n="hobbies.text"></p>
+        </section>
+
+      </main>
+
+    </div><!-- /page-layout -->
+
+    <!-- ── FOOTER ─────────────────────────────────────── -->
+    <footer class="footer" role="contentinfo">
+      <p data-i18n="footer.text"></p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
