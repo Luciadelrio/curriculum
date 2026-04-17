@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -21,7 +21,22 @@
     <!-- ── NAV ──────────────────────────────────────────── -->
     <nav class="nav" role="navigation" aria-label="Navegación principal">
       <div class="nav-inner">
-        <span class="nav-brand">Lucía del Río</span>
+        <a class="nav-brand" href="#top">Lucía del Río</a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+
+        <!-- Section links -->
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a class="nav-link" href="#formacion"   data-i18n="sections.education"></a></li>
+          <li><a class="nav-link" href="#idiomas"     data-i18n="sections.languages"></a></li>
+          <li><a class="nav-link" href="#habilidades" data-i18n="sections.skills"></a></li>
+          <li><a class="nav-link" href="#hobbies"     data-i18n="sections.hobbies"></a></li>
+          <li><a class="nav-link" href="#contacto"    data-i18n="sections.contact"></a></li>
+        </ul>
+
         <div class="lang-toggle" aria-label="Selector de idioma">
           <button id="btn-es" class="lang-btn active" type="button">ES</button>
           <span class="lang-sep">|</span>
@@ -31,8 +46,17 @@
     </nav>
 
     <!-- ── HERO ─────────────────────────────────────────── -->
-    <header class="hero" role="banner">
+    <header class="hero" id="top" role="banner">
+      <div class="hero-side hero-side--left" aria-hidden="true">
+        <span class="hero-side-line"></span>
+        <span class="hero-side-text">Periodismo · Comunicación</span>
+      </div>
+      <div class="hero-side hero-side--right" aria-hidden="true">
+        <span class="hero-side-line"></span>
+        <span class="hero-side-text">Santiago de Compostela</span>
+      </div>
       <div class="hero-inner">
+        <img src="foto.jpg" alt="Foto de Lucía del Río" class="hero-photo" />
         <p class="hero-eyebrow" data-i18n="hero.role"></p>
         <h1 class="hero-name">Lucía<br />del Río</h1>
         <div class="hero-divider" aria-hidden="true"></div>
@@ -44,62 +68,81 @@
       </div>
     </header>
 
-    <!-- ── LAYOUT ────────────────────────────────────────── -->
-    <div class="page-layout">
+    <!-- ── SECTIONS ──────────────────────────────────────── -->
 
-      <!-- SIDEBAR -->
-      <aside class="sidebar" role="complementary">
+    <!-- FORMACIÓN -->
+    <section id="formacion" class="cv-section">
+      <div class="section-inner">
+        <h2 class="section-heading" data-i18n="sections.education"></h2>
+        <p class="section-intro" data-i18n="intros.education"></p>
+        <div id="education-cards" class="edu-cards"></div>
+      </div>
+    </section>
 
-        <div class="block">
-          <h2 class="block-title" data-i18n="sections.contact"></h2>
-          <ul class="contact-list">
-            <li>
-              <span class="contact-icon" aria-hidden="true">✉</span>
+    <!-- IDIOMAS -->
+    <section id="idiomas" class="cv-section cv-section--alt">
+      <div class="section-inner">
+        <h2 class="section-heading" data-i18n="sections.languages"></h2>
+        <p class="section-intro" data-i18n="intros.languages"></p>
+        <div id="languages-cards" class="lang-cards"></div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="cv-section">
+      <div class="section-inner">
+        <h2 class="section-heading" data-i18n="sections.skills"></h2>
+        <p class="section-intro" data-i18n="intros.skills"></p>
+        <div id="skills-groups" class="skills-groups"></div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="cv-section cv-section--alt">
+      <div class="section-inner">
+        <h2 class="section-heading" data-i18n="sections.hobbies"></h2>
+        <p class="section-intro" data-i18n="intros.hobbies"></p>
+        <div id="hobbies-grid" class="hobbies-grid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="cv-section">
+      <div class="section-inner">
+        <h2 class="section-heading" data-i18n="sections.contact"></h2>
+        <p class="section-intro" data-i18n="intros.contact"></p>
+        <ul class="contact-big">
+          <li>
+            <span class="contact-icon-big" aria-hidden="true">✉</span>
+            <div class="contact-detail">
+              <span class="contact-label" data-i18n="contact.email"></span>
               <a href="mailto:luciadelriofraguela@gmail.com">luciadelriofraguela@gmail.com</a>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">☏</span>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon-big" aria-hidden="true">☏</span>
+            <div class="contact-detail">
+              <span class="contact-label" data-i18n="contact.phone"></span>
               <a href="tel:+34636678382">+34 636 67 83 82</a>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">◎</span>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon-big" aria-hidden="true">◎</span>
+            <div class="contact-detail">
+              <span class="contact-label">Instagram</span>
               <a href="https://instagram.com/luciiadelrio" target="_blank" rel="noopener">@luciiadelrio</a>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">𝕏</span>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon-big" aria-hidden="true">𝕏</span>
+            <div class="contact-detail">
+              <span class="contact-label">X / Twitter</span>
               <a href="https://x.com/luciiadelrio" target="_blank" rel="noopener">@luciiadelrio</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="block">
-          <h2 class="block-title" data-i18n="sections.languages"></h2>
-          <ul id="languages-list" class="lang-list"></ul>
-        </div>
-
-        <div class="block">
-          <h2 class="block-title" data-i18n="sections.education"></h2>
-          <ul id="education-list" class="edu-list"></ul>
-        </div>
-
-      </aside>
-
-      <!-- MAIN CONTENT -->
-      <main class="main-content" role="main">
-
-        <section class="block">
-          <h2 class="block-title" data-i18n="sections.skills"></h2>
-          <ul id="skills-list" class="tags-list"></ul>
-        </section>
-
-        <section class="block">
-          <h2 class="block-title" data-i18n="sections.hobbies"></h2>
-          <p class="body-text" data-i18n="hobbies.text"></p>
-        </section>
-
-      </main>
-
-    </div><!-- /page-layout -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- ── FOOTER ─────────────────────────────────────── -->
     <footer class="footer" role="contentinfo">
